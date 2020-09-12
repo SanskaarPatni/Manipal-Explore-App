@@ -68,7 +68,8 @@ const DUMMY_PLACES = const [
       travelWays: ['cAR', 'AUTO'],
       duration: 20,
       bestTime: BestTimeToVisit.Afternoon,
-      dummyBoolean: false),
+      dummyBoolean1: false,
+      dummyBoolean2: false),
   Place(
       id: 'm2',
       categories: [
@@ -82,7 +83,8 @@ const DUMMY_PLACES = const [
       travelWays: ['cAR', 'AUTO'],
       duration: 20,
       bestTime: BestTimeToVisit.Afternoon,
-      dummyBoolean: false),
+      dummyBoolean1: false,
+      dummyBoolean2: false),
   Place(
       id: 'm3',
       categories: [
@@ -96,7 +98,8 @@ const DUMMY_PLACES = const [
       travelWays: ['cAR', 'AUTO'],
       duration: 20,
       bestTime: BestTimeToVisit.Afternoon,
-      dummyBoolean: false),
+      dummyBoolean1: false,
+      dummyBoolean2: false),
   Place(
       id: 'm4',
       categories: [
@@ -110,7 +113,8 @@ const DUMMY_PLACES = const [
       travelWays: ['cAR', 'AUTO'],
       duration: 20,
       bestTime: BestTimeToVisit.Afternoon,
-      dummyBoolean: false),
+      dummyBoolean1: false,
+      dummyBoolean2: false),
   Place(
       id: 'm5',
       categories: [
@@ -124,7 +128,8 @@ const DUMMY_PLACES = const [
       travelWays: ['cAR', 'AUTO'],
       duration: 20,
       bestTime: BestTimeToVisit.Afternoon,
-      dummyBoolean: false),
+      dummyBoolean1: false,
+      dummyBoolean2: false),
   Place(
     id: 'm6',
     categories: [
@@ -138,6 +143,7 @@ const DUMMY_PLACES = const [
     travelWays: ['cAR', 'AUTO'],
     duration: 20,
     bestTime: BestTimeToVisit.Afternoon,
-    dummyBoolean: false,
+    dummyBoolean1: false,
+    dummyBoolean2: false,
   ),
 ];

@@ -15,7 +15,8 @@ class Place {
   final List<String> travelWays;
   final int duration;
   final BestTimeToVisit bestTime;
-  final bool dummyBoolean;
+  final bool dummyBoolean1;
+  final bool dummyBoolean2;
 
   const Place({
     @required this.id,
@@ -25,7 +26,8 @@ class Place {
     @required this.title,
     @required this.description,
     @required this.duration,
-    @required this.dummyBoolean,
+    @required this.dummyBoolean1,
+    @required this.dummyBoolean2,
     @required this.imageUrl,
   });
 }

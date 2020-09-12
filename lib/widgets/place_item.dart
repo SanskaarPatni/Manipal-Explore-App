@@ -8,7 +8,6 @@ class PlaceItem extends StatelessWidget {
   final String imageUrl;
   final int duration;
   final BestTimeToVisit bestTime;
-  final Function removeVisitedPage;
 
   PlaceItem({
     @required this.id,
@@ -16,7 +15,6 @@ class PlaceItem extends StatelessWidget {
     @required this.imageUrl,
     @required this.duration,
     @required this.bestTime,
-    @required this.removeVisitedPage,
   });
 
   String get bestTimeText {
@@ -37,7 +35,7 @@ class PlaceItem extends StatelessWidget {
         .pushNamed(PlaceDetailScreen.routeName, arguments: id)
         .then((result) {
       if (result != null) {
-        removeVisitedPage(result);
+        //removeVisitedPage(result);
       }
     });
   }

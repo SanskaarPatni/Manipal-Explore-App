@@ -3,6 +3,11 @@ import '../dummy_data.dart';
 
 class PlaceDetailScreen extends StatelessWidget {
   static const routeName = '/place-detail';
+  final Function toggleFav;
+  final Function isFavourite;
+
+  PlaceDetailScreen(this.toggleFav, this.isFavourite);
+
   @override
   Widget build(BuildContext context) {
     final placeId = ModalRoute.of(context).settings.arguments;
@@ -33,11 +38,9 @@ class PlaceDetailScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(
-          Icons.delete,
+          isFavourite(placeId) ? Icons.star : Icons.star_border,
         ),
-        onPressed: () {
-          Navigator.of(context).pop(placeId);
-        },
+        onPressed: () => toggleFav(placeId),
       ),
     );
   }

@@ -3,13 +3,24 @@ import '../widgets/main_drawer.dart';
 
 class FiltersScreen extends StatefulWidget {
   static const routeName = '/filters-screen';
+  final Function saveFilters;
+  final Map<String, bool> currentFilter;
+
+  FiltersScreen(this.saveFilters, this.currentFilter);
   @override
   _FiltersScreenState createState() => _FiltersScreenState();
 }
 
 class _FiltersScreenState extends State<FiltersScreen> {
-  bool _isWalkable = false;
-  bool _dislessthan5km = false;
+  bool _filter1 = false;
+  bool _filter2 = false;
+
+  @override
+  initState() {
+    _filter1 = widget.currentFilter['filter1'];
+    _filter2 = widget.currentFilter['filter2'];
+    super.initState();
+  }
 
   Widget buildSwitchListTile(String title, String description,
       bool currentValue, Function updateValue) {
@@ -26,6 +37,19 @@ class _FiltersScreenState extends State<FiltersScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Filters'),
+        actions: <Widget>[
+          IconButton(
+              icon: Icon(
+                Icons.save,
+              ),
+              onPressed: () {
+                final selectedFilters = {
+                  'filter1': _filter1,
+                  'filter2': _filter2,
+                };
+                widget.saveFilters(selectedFilters);
+              }),
+        ],
       ),
       drawer: MainDrawer(),
       body: Column(
@@ -43,20 +67,20 @@ class _FiltersScreenState extends State<FiltersScreen> {
                 buildSwitchListTile(
                   'Walkable',
                   'Small distance',
-                  _isWalkable,
+                  _filter1,
                   (newValue) {
                     setState(() {
-                      _isWalkable = newValue;
+                      _filter1 = newValue;
                     });
                   },
                 ),
                 buildSwitchListTile(
                   '5km',
                   'Small distance',
-                  _dislessthan5km,
+                  _filter2,
                   (newValue) {
                     setState(() {
-                      _dislessthan5km = newValue;
+                      _filter2 = newValue;
                     });
                   },
                 ),
