@@ -1,34 +1,18 @@
 import 'package:flutter/material.dart';
 import '../screens/place_detail_screen.dart';
-import '../models/place.dart';
 
 class PlaceItem extends StatelessWidget {
   final String id;
   final String title;
   final String imageUrl;
   final int duration;
-  final BestTimeToVisit bestTime;
 
   PlaceItem({
     @required this.id,
     @required this.title,
     @required this.imageUrl,
     @required this.duration,
-    @required this.bestTime,
   });
-
-  String get bestTimeText {
-    switch (bestTime) {
-      case BestTimeToVisit.Morning:
-        return 'Morning';
-      case BestTimeToVisit.Afternoon:
-        return 'Afternoon';
-      case BestTimeToVisit.Evening:
-        return 'Eveninig';
-      default:
-        return 'Unknown';
-    }
-  }
 
   void selectPlace(BuildContext ctx) {
     Navigator.of(ctx)
@@ -95,15 +79,6 @@ class PlaceItem extends StatelessWidget {
                       ),
                       SizedBox(width: 6),
                       Text('$duration min'),
-                    ],
-                  ),
-                  Row(
-                    children: <Widget>[
-                      Icon(
-                        Icons.work,
-                      ),
-                      SizedBox(width: 6),
-                      Text(bestTimeText),
                     ],
                   ),
                   Row(

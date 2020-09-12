@@ -50,7 +50,6 @@ class _CategoryPlacesScreenState extends State<CategoryPlacesScreen> {
             title: displayedPlaces[index].title,
             imageUrl: displayedPlaces[index].imageUrl,
             duration: displayedPlaces[index].duration,
-            bestTime: displayedPlaces[index].bestTime,
           );
         },
         itemCount: displayedPlaces.length,

@@ -29,7 +29,10 @@ class CategoryItem extends StatelessWidget {
           children: <Widget>[
             CircleAvatar(
               radius: 30,
-              child: Image.asset(imgPath,scale: 1.2,),
+              child: Image.asset(
+                imgPath,
+                scale: 1.2,
+              ),
               backgroundColor: Colors.white,
             ),
             SizedBox(height: 5),
@@ -38,7 +41,10 @@ class CategoryItem extends StatelessWidget {
               style: Theme.of(context).textTheme.title,
             ),
             SizedBox(height: 5),
-            Text(description)
+            Text(
+              description,
+              textAlign: TextAlign.center,
+            )
           ],
         ),
         /*decoration: BoxDecoration(

@@ -12,17 +12,13 @@ class Place {
   final String title;
   final String imageUrl;
   final String description;
-  final List<String> travelWays;
   final int duration;
-  final BestTimeToVisit bestTime;
   final bool dummyBoolean1;
   final bool dummyBoolean2;
 
   const Place({
     @required this.id,
     @required this.categories,
-    @required this.travelWays,
-    @required this.bestTime,
     @required this.title,
     @required this.description,
     @required this.duration,

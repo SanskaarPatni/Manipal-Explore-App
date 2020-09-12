@@ -22,7 +22,6 @@ class FavouritesScreen extends StatelessWidget {
             title: favouritePlaces[index].title,
             imageUrl: favouritePlaces[index].imageUrl,
             duration: favouritePlaces[index].duration,
-            bestTime: favouritePlaces[index].bestTime,
           );
         },
         itemCount: favouritePlaces.length,
