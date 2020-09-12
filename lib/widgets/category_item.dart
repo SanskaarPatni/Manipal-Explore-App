@@ -5,8 +5,11 @@ class CategoryItem extends StatelessWidget {
   final String id;
   final String title;
   final Color color;
+  final IconData iconData;
+  final String description;
 
-  CategoryItem(this.id, this.title, this.color);
+  CategoryItem(
+      this.id, this.title, this.color, this.iconData, this.description);
 
   void selectCategory(BuildContext ctx) {
     Navigator.of(ctx).pushNamed(
@@ -20,14 +23,24 @@ class CategoryItem extends StatelessWidget {
     return InkWell(
       onTap: () => selectCategory(context),
       splashColor: Theme.of(context).primaryColor,
-      borderRadius: BorderRadius.circular(15),
+      borderRadius: BorderRadius.circular(5),
       child: Container(
-        padding: const EdgeInsets.all(15),
-        child: Text(
-          title,
-          style: Theme.of(context).textTheme.title,
+        padding: EdgeInsets.all(10),
+        child: Column(
+          children: <Widget>[
+            CircleAvatar(
+              radius: 30,
+              child: Image.asset('./images/beach.png'),
+              backgroundColor: Colors.white,
+            ),
+            SizedBox(height: 5),
+            Text(
+              title,
+              style: Theme.of(context).textTheme.title,
+            )
+          ],
         ),
-        decoration: BoxDecoration(
+        /*decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
               color.withOpacity(0.7),
@@ -36,8 +49,9 @@ class CategoryItem extends StatelessWidget {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
-          borderRadius: BorderRadius.circular(15),
-        ),
+          borderRadius: BorderRadius.circular(5),
+        ),*/
+        decoration: BoxDecoration(border: Border.all(color: Colors.orange)),
       ),
     );
   }

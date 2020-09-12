@@ -11,6 +11,7 @@ class MainDrawer extends StatelessWidget {
           fontSize: 24,
           fontFamily: 'RobotoCondensed',
           fontWeight: FontWeight.bold,
+          color: Colors.black,
         ),
       ),
       onTap: tapHandler,
@@ -33,6 +34,7 @@ class MainDrawer extends StatelessWidget {
               style: TextStyle(
                   fontWeight: FontWeight.w900,
                   fontSize: 30,
+                  decoration: TextDecoration.underline,
                   color: Theme.of(context).primaryColor),
             ),
           ),
@@ -43,9 +45,10 @@ class MainDrawer extends StatelessWidget {
             'Places',
             Icons.restaurant,
             () {
-              Navigator.of(context).pushReplacementNamed('/');
+              Navigator.of(context).pushReplacementNamed('/tabs-screen');
             },
           ),
+          Divider(),
           buildListTile(
             'Filters',
             Icons.settings,

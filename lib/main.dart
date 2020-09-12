@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import './screens/tabs_screen.dart';
+import 'package:manipal_explore/screens/tabs_screen.dart';
+import './screens/welcome_screen.dart';
 import './screens/place_detail_screen.dart';
 import './screens/filters_screen.dart';
 import './screens/category_places_screen.dart';
@@ -63,9 +64,9 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'Manipal Explore',
       theme: ThemeData(
-        primarySwatch: Colors.pink,
-        accentColor: Colors.amber,
-        canvasColor: Color.fromRGBO(255, 254, 229, 1),
+        primarySwatch: Colors.orange,
+        accentColor: Colors.white,
+        canvasColor: Colors.white,
         fontFamily: 'Raleway',
         textTheme: ThemeData.light().textTheme.copyWith(
               body1: TextStyle(
@@ -77,12 +78,14 @@ class _MyAppState extends State<MyApp> {
               title: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
-                fontFamily: 'RobotCondensed',
+                fontFamily: 'Raleway',
+                color: Colors.black,
               ),
             ),
       ),
       routes: {
-        '/': (ctx) => TabsScreen(_favouritePlaces),
+        '/': (ctx) => WelcomePage(_favouritePlaces),
+        TabsScreen.routeName: (ctx) => TabsScreen(_favouritePlaces),
         CategoryPlacesScreen.routeName: (ctx) =>
             CategoryPlacesScreen(_availablePlaces),
         PlaceDetailScreen.routeName: (ctx) =>

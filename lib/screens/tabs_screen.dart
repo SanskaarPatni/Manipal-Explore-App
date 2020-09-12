@@ -5,6 +5,7 @@ import './favourites_screen.dart';
 import '../models/place.dart';
 
 class TabsScreen extends StatefulWidget {
+  static String routeName = '/tabs-screen';
   final List<Place> favouritePlaces;
   TabsScreen(this.favouritePlaces);
   @override
