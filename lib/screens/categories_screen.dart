@@ -9,12 +9,12 @@ class CategoriesScreen extends StatelessWidget {
         padding: const EdgeInsets.all(10),
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
             maxCrossAxisExtent: 200,
-            childAspectRatio: 3 / 2,
-            crossAxisSpacing: 10,
-            mainAxisSpacing: 10),
+            childAspectRatio: 3 / 3,
+            crossAxisSpacing: 30,
+            mainAxisSpacing: 30),
         children: DUMMY_CATEGORIES
             .map((catData) => CategoryItem(catData.id, catData.title,
-                catData.color, catData.iconData, catData.description))
+                catData.color, catData.imgPath, catData.description))
             .toList());
   }
 }

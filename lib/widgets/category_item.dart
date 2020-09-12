@@ -5,11 +5,10 @@ class CategoryItem extends StatelessWidget {
   final String id;
   final String title;
   final Color color;
-  final IconData iconData;
+  final String imgPath;
   final String description;
 
-  CategoryItem(
-      this.id, this.title, this.color, this.iconData, this.description);
+  CategoryItem(this.id, this.title, this.color, this.imgPath, this.description);
 
   void selectCategory(BuildContext ctx) {
     Navigator.of(ctx).pushNamed(
@@ -30,14 +29,16 @@ class CategoryItem extends StatelessWidget {
           children: <Widget>[
             CircleAvatar(
               radius: 30,
-              child: Image.asset('./images/beach.png'),
+              child: Image.asset(imgPath,scale: 1.2,),
               backgroundColor: Colors.white,
             ),
             SizedBox(height: 5),
             Text(
               title,
               style: Theme.of(context).textTheme.title,
-            )
+            ),
+            SizedBox(height: 5),
+            Text(description)
           ],
         ),
         /*decoration: BoxDecoration(
@@ -51,7 +52,8 @@ class CategoryItem extends StatelessWidget {
           ),
           borderRadius: BorderRadius.circular(5),
         ),*/
-        decoration: BoxDecoration(border: Border.all(color: Colors.orange)),
+        decoration: BoxDecoration(
+            border: Border.all(color: Colors.orange), color: Colors.white),
       ),
     );
   }

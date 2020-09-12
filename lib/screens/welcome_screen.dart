@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import './tabs_screen.dart';
 import '../models/place.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class WelcomePage extends StatefulWidget {
   final List<Place> favouritePlaces;
@@ -17,7 +18,7 @@ class _WelcomePageState extends State<WelcomePage> {
     itemBuilder: (BuildContext context, int index) {
       return DecoratedBox(
         decoration: BoxDecoration(
-          color: Colors.black,
+          color: Color.fromRGBO(25, 124, 154, 1),
         ),
       );
     },
@@ -39,6 +40,7 @@ class _WelcomePageState extends State<WelcomePage> {
                     child: Icon(
                       Icons.explore,
                       size: 50,
+                      color: Color.fromRGBO(25, 124, 154, 1),
                     ),
                   ),
                   SizedBox(
@@ -47,15 +49,20 @@ class _WelcomePageState extends State<WelcomePage> {
                   SizedBox(
                     child: Text(
                       'Manipal Explore',
-                      style: TextStyle(
+                      style: GoogleFonts.montserratSubrayada(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
-                        fontFamily: 'RaleWay',
                       ),
                     ),
                   ),
+                  Text(
+                    'Your Personal guide!',
+                    style: GoogleFonts.andika(
+                      fontSize: 20,
+                    ),
+                  ),
                   SizedBox(
-                    height: 100,
+                    height: 50,
                   ),
                   ClipRRect(
                     borderRadius: BorderRadius.circular(50),

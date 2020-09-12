@@ -4,13 +4,13 @@ class Category {
   final String id;
   final String title;
   final Color color;
-  final IconData iconData;
+  final String imgPath;
   final String description;
 
   const Category(
       {@required this.id,
       @required this.title,
       this.color = Colors.orange,
-      @required this.iconData,
+      @required this.imgPath,
       @required this.description});
 }

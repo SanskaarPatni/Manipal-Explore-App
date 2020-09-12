@@ -66,7 +66,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         primarySwatch: Colors.orange,
         accentColor: Colors.white,
-        canvasColor: Colors.white,
+        canvasColor: Color.fromRGBO(25, 124, 154, 1),
         fontFamily: 'Raleway',
         textTheme: ThemeData.light().textTheme.copyWith(
               body1: TextStyle(
