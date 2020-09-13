@@ -18,6 +18,7 @@ class _MyAppState extends State<MyApp> {
   Map<String, bool> _filters = {
     'filter1': false,
     'filter2': false,
+    'filter3': false,
   };
 
   List<Place> _availablePlaces = DUMMY_PLACES;
@@ -27,10 +28,13 @@ class _MyAppState extends State<MyApp> {
     setState(() {
       _filters = filterData;
       _availablePlaces = DUMMY_PLACES.where((place) {
-        if (_filters['filter1'] && !place.dummyBoolean1) {
+        if (_filters['filter1'] && !place.under2km) {
           return false;
         }
-        if (_filters['filter2'] && !place.dummyBoolean2) {
+        if (_filters['filter2'] && !place.under5km) {
+          return false;
+        }
+        if (_filters['filter3'] && !place.morethan7km) {
           return false;
         }
         return true;

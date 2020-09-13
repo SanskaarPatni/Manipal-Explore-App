@@ -13,8 +13,10 @@ class Place {
   final String imageUrl;
   final String description;
   final int duration;
-  final bool dummyBoolean1;
-  final bool dummyBoolean2;
+  final double distance;
+  final bool under2km;
+  final bool under5km;
+  final bool morethan7km;
 
   const Place({
     @required this.id,
@@ -22,8 +24,10 @@ class Place {
     @required this.title,
     @required this.description,
     @required this.duration,
-    @required this.dummyBoolean1,
-    @required this.dummyBoolean2,
+    @required this.distance,
+    @required this.under2km,
+    @required this.under5km,
+    @required this.morethan7km,
     @required this.imageUrl,
   });
 }

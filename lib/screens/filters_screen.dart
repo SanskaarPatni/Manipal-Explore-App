@@ -14,18 +14,25 @@ class FiltersScreen extends StatefulWidget {
 class _FiltersScreenState extends State<FiltersScreen> {
   bool _filter1 = false;
   bool _filter2 = false;
+  bool _filter3 = false;
 
   @override
   initState() {
     _filter1 = widget.currentFilter['filter1'];
     _filter2 = widget.currentFilter['filter2'];
+    _filter3 = widget.currentFilter['filter3'];
     super.initState();
   }
 
   Widget buildSwitchListTile(String title, String description,
       bool currentValue, Function updateValue) {
     return SwitchListTile(
-      title: Text(title),
+      title: Text(
+        title,
+        style: TextStyle(
+          color: Colors.white,
+        ),
+      ),
       value: currentValue,
       subtitle: Text(description),
       onChanged: updateValue,
@@ -58,7 +65,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
             padding: EdgeInsets.all(20),
             child: Text(
               'Adjust your search selections',
-              style: Theme.of(context).textTheme.title,
+              style: TextStyle(color: Colors.white, fontSize: 24),
             ),
           ),
           Expanded(
@@ -66,7 +73,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
               children: <Widget>[
                 buildSwitchListTile(
                   'Walkable',
-                  'Small distance',
+                  'Distance less than 2 kms.',
                   _filter1,
                   (newValue) {
                     setState(() {
@@ -75,12 +82,22 @@ class _FiltersScreenState extends State<FiltersScreen> {
                   },
                 ),
                 buildSwitchListTile(
-                  '5km',
-                  'Small distance',
+                  'Might req a vehicle',
+                  'Place in a radius of 5km.',
                   _filter2,
                   (newValue) {
                     setState(() {
                       _filter2 = newValue;
+                    });
+                  },
+                ),
+                buildSwitchListTile(
+                  'Day out',
+                  'Somewhere which is more than 7km.',
+                  _filter3,
+                  (newValue) {
+                    setState(() {
+                      _filter3 = newValue;
                     });
                   },
                 ),

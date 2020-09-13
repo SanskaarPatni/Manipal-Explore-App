@@ -6,12 +6,14 @@ class PlaceItem extends StatelessWidget {
   final String title;
   final String imageUrl;
   final int duration;
+  final double distance;
 
   PlaceItem({
     @required this.id,
     @required this.title,
     @required this.imageUrl,
     @required this.duration,
+    @required this.distance,
   });
 
   void selectPlace(BuildContext ctx) {
@@ -84,10 +86,10 @@ class PlaceItem extends StatelessWidget {
                   Row(
                     children: <Widget>[
                       Icon(
-                        Icons.schedule,
+                        Icons.directions,
                       ),
                       SizedBox(width: 6),
-                      Text('$duration min'),
+                      Text('$distance km'),
                     ],
                   )
                 ],

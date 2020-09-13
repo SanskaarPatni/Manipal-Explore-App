@@ -88,6 +88,7 @@ class _CategoryPlacesScreenState extends State<CategoryPlacesScreen> {
             title: filteredSearchPlaces[index].title,
             imageUrl: filteredSearchPlaces[index].imageUrl,
             duration: filteredSearchPlaces[index].duration,
+            distance: filteredSearchPlaces[index].distance,
           );
         },
         itemCount: filteredSearchPlaces.length,

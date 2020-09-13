@@ -10,8 +10,9 @@ class FavouritesScreen extends StatelessWidget {
     if (favouritePlaces.isEmpty) {
       return Center(
         child: Text(
-          'No favourites yet-Start adding some places you want to explore!',
+          'No favourites yet- Start adding some places you want to explore!',
           textAlign: TextAlign.center,
+          style: TextStyle(color: Colors.white, fontSize: 20),
         ),
       );
     } else {
@@ -22,6 +23,7 @@ class FavouritesScreen extends StatelessWidget {
             title: favouritePlaces[index].title,
             imageUrl: favouritePlaces[index].imageUrl,
             duration: favouritePlaces[index].duration,
+            distance: favouritePlaces[index].distance,
           );
         },
         itemCount: favouritePlaces.length,
