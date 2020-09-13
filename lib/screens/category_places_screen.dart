@@ -13,7 +13,9 @@ class CategoryPlacesScreen extends StatefulWidget {
 class _CategoryPlacesScreenState extends State<CategoryPlacesScreen> {
   String categoryTitle;
   List<Place> displayedPlaces;
+  List<Place> filteredSearchPlaces;
   var _loadedInitData = false;
+  bool isSearching = false;
 
   @override
   void initState() {
@@ -32,27 +34,63 @@ class _CategoryPlacesScreenState extends State<CategoryPlacesScreen> {
       displayedPlaces = widget.availablePlaces.where((place) {
         return place.categories.contains(categoryId);
       }).toList();
+      filteredSearchPlaces = displayedPlaces;
       _loadedInitData = true;
     }
     super.didChangeDependencies();
+  }
+
+  void _filterCountries(value) {
+    setState(() {
+      filteredSearchPlaces = displayedPlaces
+          .where((place) =>
+              place.title.toLowerCase().contains(value.toLowerCase()))
+          .toList();
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(categoryTitle),
+        title: !isSearching
+            ? Text(categoryTitle)
+            : TextField(
+                onChanged: (value) {
+                  _filterCountries(value);
+                },
+              ),
+        actions: <Widget>[
+          isSearching
+              ? IconButton(
+                  icon: Icon(Icons.cancel),
+                  onPressed: () {
+                    setState(() {
+                      this.isSearching = false;
+                      filteredSearchPlaces = displayedPlaces;
+                    });
+                  },
+                )
+              : IconButton(
+                  icon: Icon(Icons.search),
+                  onPressed: () {
+                    setState(() {
+                      this.isSearching = true;
+                    });
+                  },
+                ),
+        ],
       ),
       body: ListView.builder(
         itemBuilder: (ctx, index) {
           return PlaceItem(
-            id: displayedPlaces[index].id,
-            title: displayedPlaces[index].title,
-            imageUrl: displayedPlaces[index].imageUrl,
-            duration: displayedPlaces[index].duration,
+            id: filteredSearchPlaces[index].id,
+            title: filteredSearchPlaces[index].title,
+            imageUrl: filteredSearchPlaces[index].imageUrl,
+            duration: filteredSearchPlaces[index].duration,
           );
         },
-        itemCount: displayedPlaces.length,
+        itemCount: filteredSearchPlaces.length,
       ),
     );
   }
