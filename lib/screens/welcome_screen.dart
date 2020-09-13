@@ -53,6 +53,7 @@ class _WelcomePageState extends State<WelcomePage> {
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
                       ),
+                      textAlign: TextAlign.center,
                     ),
                   ),
                   Text(
