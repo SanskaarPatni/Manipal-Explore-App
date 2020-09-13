@@ -5,7 +5,7 @@ import './models/place.dart';
 const DUMMY_CATEGORIES = const [
   Category(
     id: 'c1',
-    title: 'Restaurants',
+    title: 'Cafés',
     color: Colors.purple,
     imgPath: './images/cafe.png',
     description: 'Grab a quick bite!',
@@ -43,7 +43,7 @@ const DUMMY_CATEGORIES = const [
     title: 'Nature',
     color: Colors.green,
     imgPath: './images/beach.png',
-    description: 'Salty air,beaches sound good!',
+    description: 'Beaches, falls we have got it all',
   ),
   Category(
     id: 'c7',
@@ -68,7 +68,7 @@ const DUMMY_PLACES = const [
       ],
       title: 'The Egg Factory',
       imageUrl:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg',
+          'https://i0.wp.com/manipalblog.com/wp-content/uploads/2015/08/Egg-Factory-Manipal-Entrance.jpg?fit=1200%2C1600&ssl=1',
       description: 'Blah blaj',
       duration: 20,
       dummyBoolean1: false,
@@ -78,9 +78,9 @@ const DUMMY_PLACES = const [
       categories: [
         'c1',
       ],
-      title: 'Pai Tiffin',
+      title: 'Basil Cafe',
       imageUrl:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg',
+          'https://media-cdn.tripadvisor.com/media/photo-s/0c/25/24/93/basil.jpg',
       description: 'Blah blaj',
       duration: 20,
       dummyBoolean1: false,
@@ -92,7 +92,7 @@ const DUMMY_PLACES = const [
       ],
       title: 'Dollops',
       imageUrl:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg',
+          'https://content3.jdmagicbox.com/comp/udupi/43/0820P820STD40243/catalogue/dollops-manipal-udupi-home-delivery-restaurants-19n4ycv.png',
       description: 'Blah blaj',
       duration: 20,
       dummyBoolean1: false,
@@ -104,31 +104,19 @@ const DUMMY_PLACES = const [
       ],
       title: 'DeeTee',
       imageUrl:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg',
+          'https://i1.wp.com/manipalblog.com/wp-content/uploads/2018/11/DeeTee-Manipal.jpg',
       description: 'Blah blaj',
       duration: 20,
       dummyBoolean1: false,
       dummyBoolean2: false),
   Place(
-      id: 'm5',
-      categories: [
-        'c2',
-      ],
-      title: 'Zeal',
-      imageUrl:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg',
-      description: 'Blah blaj',
-      duration: 20,
-      dummyBoolean1: false,
-      dummyBoolean2: false),
-  Place(
-    id: 'm6',
+    id: 'm5',
     categories: [
       'c2',
     ],
-    title: 'Remix',
+    title: 'Zeal RoofTop',
     imageUrl:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg',
+        'https://content.jdmagicbox.com/comp/udupi/e3/0820px820.x820.180703131936.v6e3/catalogue/zeal-rooftop-and-grill-manipal-udupi-restaurants-0SmpdKpzcW.jpg',
     description: 'Blah blaj',
     duration: 20,
     dummyBoolean1: false,
@@ -141,7 +129,7 @@ const DUMMY_PLACES = const [
     ],
     title: 'Durgamba Temple',
     imageUrl:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg',
+        'https://images.jdmagicbox.com/comp/udupi/y2/0820px820.x820.190821210412.d2y2/catalogue/venugopal-temple-manipal-udupi-temples-a7107sk4es.jpg?clr=',
     description: 'Blah blaj',
     duration: 20,
     dummyBoolean1: false,
@@ -167,7 +155,7 @@ const DUMMY_PLACES = const [
     ],
     title: 'Manipal Lake Park',
     imageUrl:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg',
+        'https://lh3.googleusercontent.com/proxy/F1dsaekTpXewGpqs28vtO1dLf3cSTCzVqigmNut8sUto0aFsZd4enEPDDYMldug3s4rLSVWiIuoR4PQMy6ckMKNFR3XaOk98lT5eM9mvtLWU3bId3MaAknkME9pHIJ3X6s4a4PQxN3CxLaiALL3Q',
     description: 'Blah blaj',
     duration: 20,
     dummyBoolean1: false,
@@ -180,7 +168,7 @@ const DUMMY_PLACES = const [
     ],
     title: 'Manipal End Point',
     imageUrl:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg',
+        'https://content3.jdmagicbox.com/comp/udupi/e5/0820px820.x820.170928022054.h5e5/catalogue/manipal-end-point-park-manipal-udupi-parks-vqu9gzzo96.jpg',
     description: 'Blah blaj',
     duration: 20,
     dummyBoolean1: false,
@@ -193,7 +181,7 @@ const DUMMY_PLACES = const [
     ],
     title: 'Inox Cinemas',
     imageUrl:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg',
+        'https://themanipaljournal.com/wp-content/uploads/2015/11/inox-451x305.png',
     description: 'Blah blaj',
     duration: 20,
     dummyBoolean1: false,
@@ -206,7 +194,7 @@ const DUMMY_PLACES = const [
     ],
     title: 'Bharat Cinemas',
     imageUrl:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg',
+        'https://dhoom.filmipop.com/media//theatre/2017/Dec/1514095029-bharath.giii.jpg',
     description: 'Blah blaj',
     duration: 20,
     dummyBoolean1: false,
@@ -219,7 +207,7 @@ const DUMMY_PLACES = const [
     ],
     title: 'Hoode Beach',
     imageUrl:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg',
+        'https://insatiablewanderers.files.wordpress.com/2018/05/mg_3776_fotor.jpg?w=604',
     description: 'Blah blaj',
     duration: 20,
     dummyBoolean1: false,
@@ -230,9 +218,9 @@ const DUMMY_PLACES = const [
     categories: [
       'c6',
     ],
-    title: 'Malpe Beach',
+    title: 'Kaup Beach',
     imageUrl:
-        'https://drive.google.com/drive/u/0/folders/1ZYddrLDPKAs3F754NuG6VFUYDeeQb1ey',
+        'https://3.imimg.com/data3/KN/IW/MY-17460777/kaup-beach-tour-packages-500x500.jpg',
     description: 'Blah blaj',
     duration: 20,
     dummyBoolean1: false,
@@ -245,7 +233,7 @@ const DUMMY_PLACES = const [
     ],
     title: 'Kasturba Medical Hospital',
     imageUrl:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg',
+        'https://images.jdmagicbox.com/comp/udupi/e5/0820px820.x820.000968039916.m1e5/catalogue/kasturba-hospital-manipal-udupi-multispeciality-hospitals-8wajhru3yd.jpg?clr=#452d21',
     description: 'Blah blaj',
     duration: 20,
     dummyBoolean1: false,
@@ -258,7 +246,7 @@ const DUMMY_PLACES = const [
     ],
     title: 'MCOPS',
     imageUrl:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg',
+        'https://www.highereducationdigest.com/wp-content/uploads/2019/05/IMAGE-1-3-550x330.jpg',
     description: 'Blah blaj',
     duration: 20,
     dummyBoolean1: false,

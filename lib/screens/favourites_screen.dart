@@ -10,7 +10,7 @@ class FavouritesScreen extends StatelessWidget {
     if (favouritePlaces.isEmpty) {
       return Center(
         child: Text(
-          'No favourites yet-start adding some places you want to explore!',
+          'No favourites yet-Start adding some places you want to explore!',
           textAlign: TextAlign.center,
         ),
       );
