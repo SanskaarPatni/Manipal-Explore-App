@@ -24,23 +24,25 @@ class CategoryItem extends StatelessWidget {
       splashColor: Theme.of(context).primaryColor,
       borderRadius: BorderRadius.circular(5),
       child: Container(
+        alignment: Alignment.center,
         padding: const EdgeInsets.all(10),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             CircleAvatar(
               radius: 30,
               child: Image.asset(
                 imgPath,
-                scale: 1.2,
+                scale: 1,
               ),
               backgroundColor: Colors.white,
             ),
-            SizedBox(height: 5),
+            SizedBox(height: 1),
             Text(
               title,
               style: Theme.of(context).textTheme.title,
             ),
-            SizedBox(height: 5),
+            SizedBox(height: 1),
             Text(
               description,
               textAlign: TextAlign.center,

@@ -29,7 +29,7 @@ const DUMMY_CATEGORIES = const [
     title: 'Parks',
     color: Colors.amber,
     imgPath: './images/park.png',
-    description: 'Take a break to get some fresh air',
+    description: 'Go out to get some fresh air!',
   ),
   Category(
     id: 'c5',
