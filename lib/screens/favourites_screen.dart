@@ -12,7 +12,7 @@ class FavouritesScreen extends StatelessWidget {
         child: Text(
           'No favourites yet- Start adding some places you want to explore!',
           textAlign: TextAlign.center,
-          style: TextStyle(color: Colors.white, fontSize: 20),
+          style: TextStyle(color: Colors.white, fontSize: 15),
         ),
       );
     } else {

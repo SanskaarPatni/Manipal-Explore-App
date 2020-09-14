@@ -70,7 +70,7 @@ class PlaceDetailScreen extends StatelessWidget {
       margin: EdgeInsets.all(10),
       padding: EdgeInsets.all(10),
       height: 150,
-      width: 220,
+      //width: 180,
       child: child,
     );
   }
@@ -180,38 +180,44 @@ class PlaceDetailScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  Column(
-                    children: <Widget>[
-                      Text(
-                        '4.2',
-                        style: TextStyle(
-                          fontSize: 50,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Text('80 votes'),
-                    ],
-                  ),
-                  Column(
-                    children: <Widget>[
-                      // review('"Good Ambience" ~ Sanskaar'),
-                      // SizedBox(
-                      //   height: 5,
-                      // ),
-                      // review('"Value for Money" ~ kanjoos'),
-                      buildContainer(
-                        ListView.builder(
-                          itemCount: reviews.length,
-                          itemBuilder: (ctx, index) => Card(
-                            color: Theme.of(context).accentColor,
-                            child: Padding(
-                                padding: EdgeInsets.symmetric(
-                                    vertical: 5, horizontal: 10),
-                                child: Text(reviews[index])),
+                  Expanded(
+                    flex: 1,
+                    child: Column(
+                      children: <Widget>[
+                        Text(
+                          '4.2',
+                          style: TextStyle(
+                            fontSize: 50,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
-                      ),
-                    ],
+                        Text('80 votes'),
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    flex: 2,
+                    child: Column(
+                      children: <Widget>[
+                        // review('"Good Ambience" ~ Sanskaar'),
+                        // SizedBox(
+                        //   height: 5,
+                        // ),
+                        // review('"Value for Money" ~ kanjoos'),
+                        buildContainer(
+                          ListView.builder(
+                            itemCount: reviews.length,
+                            itemBuilder: (ctx, index) => Card(
+                              color: Theme.of(context).accentColor,
+                              child: Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: 5, horizontal: 10),
+                                  child: Text(reviews[index])),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),

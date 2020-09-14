@@ -24,7 +24,7 @@ class CategoryItem extends StatelessWidget {
       splashColor: Theme.of(context).primaryColor,
       borderRadius: BorderRadius.circular(5),
       child: Container(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: Column(
           children: <Widget>[
             CircleAvatar(
@@ -47,17 +47,6 @@ class CategoryItem extends StatelessWidget {
             )
           ],
         ),
-        /*decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              color.withOpacity(0.7),
-              color,
-            ],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-          borderRadius: BorderRadius.circular(5),
-        ),*/
         decoration: BoxDecoration(
             border: Border.all(color: Colors.orange), color: Colors.white),
       ),

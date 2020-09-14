@@ -63,13 +63,13 @@ class _WelcomePageState extends State<WelcomePage> {
                     ),
                   ),
                   SizedBox(
-                    height: 50,
+                    height: 45,
                   ),
                   ClipRRect(
                     borderRadius: BorderRadius.circular(50),
                     child: Container(
                       color: Colors.orange,
-                      height: 75,
+                      height: 65,
                       width: 150,
                       child: FlatButton(
                         child: Text(
@@ -89,10 +89,18 @@ class _WelcomePageState extends State<WelcomePage> {
                       ),
                     ),
                   ),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  spinkit,
+                  MediaQuery.of(context).size.height > 330
+                      ? SizedBox(
+                          height: 30,
+                        )
+                      : SizedBox(
+                          height: 0,
+                        ),
+                  MediaQuery.of(context).size.height > 330
+                      ? spinkit
+                      : SizedBox(
+                          height: 0,
+                        ),
                 ],
               ),
             ),
